@@ -1,0 +1,16 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+/.idea
+/build
+/local.properties
+/sample/build
+/sample/sample.iml
+/crop/build
+/crop/crop.iml
