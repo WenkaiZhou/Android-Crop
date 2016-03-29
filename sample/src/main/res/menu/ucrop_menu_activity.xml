@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/menu_crop"
-        android:icon="@drawable/ucrop_ic_done"
+        android:icon="@mipmap/ucrop_ic_done"
         android:title="@string/ucrop_menu_crop"
         app:showAsAction="always"/>
 

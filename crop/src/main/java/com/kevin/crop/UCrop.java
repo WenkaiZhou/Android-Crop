@@ -11,9 +11,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.FloatRange;
+import android.support.annotation.IntDef;
 import android.support.annotation.IntRange;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
  * Created by Oleksii Shliama (https://github.com/shliama).
@@ -43,7 +47,18 @@ public class UCrop {
     private Intent mCropIntent;
     private Bundle mCropOptionsBundle;
 
-    private Class<?> targetClazz = UCropActivity.class;
+    private Class<?> targetClazz;
+
+    public static final int NONE = 0;
+    public static final int SCALE = 1;
+    public static final int ROTATE = 2;
+    public static final int ALL = 3;
+
+    @IntDef({NONE, SCALE, ROTATE, ALL})
+    @Retention(RetentionPolicy.SOURCE)
+    public @interface GestureTypes {
+
+    }
 
     /**
      * This method creates new Intent builder and sets both source and destination image URIs.
@@ -164,9 +179,9 @@ public class UCrop {
     }
 
     /**
-     * Get Intent to start {@link UCropActivity}
+     * Get Intent to start Activity
      *
-     * @return Intent for {@link UCropActivity}
+     * @return Intent for Activity
      */
     public Intent getIntent(@NonNull Context context) {
         mCropIntent.setClass(context, targetClazz);
@@ -280,9 +295,9 @@ public class UCrop {
         /**
          * Choose what set of gestures will be enabled on each tab - if any.
          */
-        public void setAllowedGestures(@UCropActivity.GestureTypes int tabScale,
-                                       @UCropActivity.GestureTypes int tabRotate,
-                                       @UCropActivity.GestureTypes int tabAspectRatio) {
+        public void setAllowedGestures(@GestureTypes int tabScale,
+                                       @GestureTypes int tabRotate,
+                                       @GestureTypes int tabAspectRatio) {
             mOptionBundle.putIntArray(EXTRA_ALLOWED_GESTURES, new int[]{tabScale, tabRotate, tabAspectRatio});
         }
 

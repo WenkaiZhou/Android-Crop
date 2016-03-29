@@ -92,7 +92,7 @@
             <ImageView
                 android:id="@+id/image_view_state_scale"
                 style="@style/ucrop_ImageViewWidgetIcon"
-                android:src="@drawable/ucrop_ic_scale"/>
+                android:src="@mipmap/ucrop_ic_scale"/>
 
         </FrameLayout>
 
@@ -103,7 +103,7 @@
             <ImageView
                 android:id="@+id/image_view_state_aspect_ratio"
                 style="@style/ucrop_ImageViewWidgetIcon"
-                android:src="@drawable/ucrop_ic_crop"/>
+                android:src="@mipmap/ucrop_ic_crop"/>
 
         </FrameLayout>
 
@@ -114,7 +114,7 @@
             <ImageView
                 android:id="@+id/image_view_state_rotate"
                 style="@style/ucrop_ImageViewWidgetIcon"
-                android:src="@drawable/ucrop_ic_rotate"/>
+                android:src="@mipmap/ucrop_ic_rotate"/>
 
         </FrameLayout>
 

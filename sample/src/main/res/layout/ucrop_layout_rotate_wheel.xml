@@ -12,7 +12,7 @@
         style="@style/ucrop_TextViewWidgetText"
         android:text="100°"/>
 
-    <com.kevin.crop.view.widget.HorizontalProgressWheelView
+    <com.kevin.crop.widget.HorizontalProgressWheelView
         android:id="@+id/rotate_scroll_wheel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,7 +29,7 @@
 
         <ImageView
             style="@style/ucrop_ImageViewWidgetIcon"
-            android:src="@drawable/ucrop_ic_reset"/>
+            android:src="@mipmap/ucrop_ic_reset"/>
 
     </FrameLayout>
 
@@ -42,7 +42,7 @@
 
         <ImageView
             style="@style/ucrop_ImageViewWidgetIcon"
-            android:src="@drawable/ucrop_ic_angle"/>
+            android:src="@mipmap/ucrop_ic_angle"/>
 
     </FrameLayout>
 

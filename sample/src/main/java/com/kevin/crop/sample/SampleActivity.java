@@ -169,6 +169,7 @@ public class SampleActivity extends BaseActivity {
 
         uCrop = basisConfig(uCrop);
         uCrop = advancedConfig(uCrop);
+        uCrop.setTargetActivity(UCropActivity.class);
 
         uCrop.start(SampleActivity.this);
     }
@@ -219,7 +220,7 @@ public class SampleActivity extends BaseActivity {
     }
 
     /**
-     * Sometimes you want to adjust more options, it's done via {@link com.yalantis.ucrop.UCrop.Options} class.
+     * Sometimes you want to adjust more options, it's done via {@link com.kevin.crop.UCrop.Options} class.
      *
      * @param uCrop - ucrop builder instance
      * @return - ucrop builder instance
