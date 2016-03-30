@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.kevin.crop.UCrop;
 import com.kevin.crop.UCropActivity;
+import com.kevin.crop.WeiXinCropActivity;
 
 import java.io.File;
 

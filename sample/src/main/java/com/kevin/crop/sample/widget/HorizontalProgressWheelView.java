@@ -1,4 +1,4 @@
-package com.kevin.crop.widget;
+package com.kevin.crop.sample.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;

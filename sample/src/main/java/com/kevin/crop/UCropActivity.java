@@ -10,7 +10,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.IdRes;
-import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
@@ -36,12 +35,10 @@ import com.kevin.crop.view.TransformImageView;
 import com.kevin.crop.view.UCropView;
 
 import com.kevin.crop.sample.R;
-import com.kevin.crop.widget.AspectRatioTextView;
-import com.kevin.crop.widget.HorizontalProgressWheelView;
+import com.kevin.crop.sample.widget.AspectRatioTextView;
+import com.kevin.crop.sample.widget.HorizontalProgressWheelView;
 
 import java.io.OutputStream;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,16 +50,7 @@ public class UCropActivity extends AppCompatActivity {
     public static final int DEFAULT_COMPRESS_QUALITY = 90;
     public static final Bitmap.CompressFormat DEFAULT_COMPRESS_FORMAT = Bitmap.CompressFormat.JPEG;
 
-    public static final int NONE = 0;
-    public static final int SCALE = 1;
-    public static final int ROTATE = 2;
-    public static final int ALL = 3;
 
-    @IntDef({NONE, SCALE, ROTATE, ALL})
-    @Retention(RetentionPolicy.SOURCE)
-    public @interface GestureTypes {
-
-    }
 
     private static final String TAG = "UCropActivity";
 
@@ -91,7 +79,7 @@ public class UCropActivity extends AppCompatActivity {
 
     private Bitmap.CompressFormat mCompressFormat = DEFAULT_COMPRESS_FORMAT;
     private int mCompressQuality = DEFAULT_COMPRESS_QUALITY;
-    private int[] mAllowedGestures = new int[]{SCALE, ROTATE, ALL};
+    private int[] mAllowedGestures = new int[]{UCrop.SCALE, UCrop.ROTATE, UCrop.ALL};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -518,8 +506,8 @@ public class UCropActivity extends AppCompatActivity {
     }
 
     private void setAllowedGestures(int tab) {
-        mGestureCropImageView.setScaleEnabled(mAllowedGestures[tab] == ALL || mAllowedGestures[tab] == SCALE);
-        mGestureCropImageView.setRotateEnabled(mAllowedGestures[tab] == ALL || mAllowedGestures[tab] == ROTATE);
+        mGestureCropImageView.setScaleEnabled(mAllowedGestures[tab] == UCrop.ALL || mAllowedGestures[tab] == UCrop.SCALE);
+        mGestureCropImageView.setRotateEnabled(mAllowedGestures[tab] == UCrop.ALL || mAllowedGestures[tab] == UCrop.ROTATE);
     }
 
     private void cropAndSaveImage() {

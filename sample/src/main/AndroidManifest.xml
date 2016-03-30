@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".SampleActivity"
+            android:name=".LauncherActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -22,11 +22,23 @@
         </activity>
 
         <activity
+            android:name=".SampleActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
             android:name=".ResultActivity"
             android:screenOrientation="portrait"/>
 
         <activity
             android:name="com.kevin.crop.UCropActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.kevin.crop.WeiXinCropActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".WeiXinActivity"
             android:screenOrientation="portrait"/>
 
     </application>
