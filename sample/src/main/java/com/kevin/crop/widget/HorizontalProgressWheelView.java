@@ -12,7 +12,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.kevin.crop.R;
+import com.kevin.crop.sample.R;
 
 /**
  * Created by Oleksii Shliama (https://github.com/shliama).

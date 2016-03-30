@@ -22,10 +22,4 @@
         <attr name="ucrop_show_frame" format="boolean" />
     </declare-styleable>
 
-    <declare-styleable name="ucrop_AspectRatioTextView">
-        <attr name="ucrop_artv_ratio_title" format="string" />
-        <attr name="ucrop_artv_ratio_x" format="float" />
-        <attr name="ucrop_artv_ratio_y" format="float" />
-    </declare-styleable>
-
 </resources>

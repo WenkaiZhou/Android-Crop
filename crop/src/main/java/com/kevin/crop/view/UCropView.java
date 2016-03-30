@@ -9,7 +9,6 @@ import android.widget.FrameLayout;
 
 import com.kevin.crop.R;
 
-
 public class UCropView extends FrameLayout {
 
     private final GestureCropImageView mGestureCropImageView;

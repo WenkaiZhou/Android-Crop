@@ -16,7 +16,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.TextView;
 
-import com.kevin.crop.R;
+import com.kevin.crop.sample.R;
 import com.kevin.crop.view.CropImageView;
 
 /**
