@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -93,7 +94,6 @@ public class WeiXinCropActivity  extends AppCompatActivity {
                 cropAndSaveImage();
             }
         });
-
     }
 
     private void cropAndSaveImage() {

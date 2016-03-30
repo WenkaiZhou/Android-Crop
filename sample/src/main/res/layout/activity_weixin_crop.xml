@@ -14,16 +14,16 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:layout_marginRight="8dp"
-                android:background="@drawable/button_selector"
                 android:id="@+id/weixin_act_crop_tv_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/button_selector"
+                android:padding="8dp"
                 android:text="使用"
                 android:textColor="@android:color/white"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="14dp" />
         </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
