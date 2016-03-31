@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 public class LauncherActivity extends ListActivity { 
 
-	public static final String[] options = { "SampleActivity", "WeiXinActivity"};
+	public static final String[] options = { "SampleActivity", "WeiChatActivity"};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class LauncherActivity extends ListActivity {
 				intent = new Intent(this, SampleActivity.class);
 				break;
 			case 1:
-				intent = new Intent(this, WeiXinActivity.class);
+				intent = new Intent(this, WeiChatActivity.class);
 				break;
 		}
 

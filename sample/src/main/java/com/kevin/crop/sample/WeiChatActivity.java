@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.kevin.crop.UCrop;
-import com.kevin.crop.WeiXinCropActivity;
+import com.kevin.crop.WeiChatCropActivity;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,7 +20,7 @@ import java.io.IOException;
 /**
  * Created by zhouwk on 2016/3/30 0030.
  */
-public class WeiXinActivity extends BaseActivity implements View.OnClickListener {
+public class WeiChatActivity extends BaseActivity implements View.OnClickListener {
 
     private static final int REQUEST_SELECT_PICTURE = 0x01;
     // 剪切后图像文件
@@ -32,7 +32,7 @@ public class WeiXinActivity extends BaseActivity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weixin);
+        setContentView(R.layout.activity_weichat);
         mDestinationUri = Uri.fromFile(new File(getCacheDir(), "cropImage.jpeg"));
         initView();
 
@@ -72,7 +72,7 @@ public class WeiXinActivity extends BaseActivity implements View.OnClickListener
                 if (selectedUri != null) {
                     startCropActivity(data.getData());
                 } else {
-                    Toast.makeText(WeiXinActivity.this, "无法剪切选择图片", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WeiChatActivity.this, "无法剪切选择图片", Toast.LENGTH_SHORT).show();
                 }
             } else if (requestCode == UCrop.REQUEST_CROP) {
                 handleCropResult(data);
@@ -86,8 +86,8 @@ public class WeiXinActivity extends BaseActivity implements View.OnClickListener
      */
     private void startCropActivity(Uri uri) {
         UCrop uCrop = UCrop.of(uri, mDestinationUri);
-        uCrop.setTargetActivity(WeiXinCropActivity.class);
-        uCrop.start(WeiXinActivity.this);
+        uCrop.setTargetActivity(WeiChatCropActivity.class);
+        uCrop.start(WeiChatActivity.this);
     }
 
     /**
@@ -106,7 +106,7 @@ public class WeiXinActivity extends BaseActivity implements View.OnClickListener
             } catch (IOException e) {
             }
         } else {
-            Toast.makeText(WeiXinActivity.this, "无法剪切选择图片", Toast.LENGTH_SHORT).show();
+            Toast.makeText(WeiChatActivity.this, "无法剪切选择图片", Toast.LENGTH_SHORT).show();
         }
     }
 }

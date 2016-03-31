@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -24,7 +23,7 @@ import java.io.OutputStream;
 /**
  * Created by zhouwk on 2016/3/30 0030.
  */
-public class WeiXinCropActivity  extends AppCompatActivity {
+public class WeiChatCropActivity extends AppCompatActivity {
 
     UCropView mUCropView;
     GestureCropImageView mGestureCropImageView;
@@ -36,7 +35,7 @@ public class WeiXinCropActivity  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weixin_crop);
+        setContentView(R.layout.activity_weichat_crop);
 
         initView();
         final Intent intent = getIntent();

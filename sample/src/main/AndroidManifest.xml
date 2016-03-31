@@ -34,11 +34,11 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name="com.kevin.crop.WeiXinCropActivity"
+            android:name="com.kevin.crop.WeiChatCropActivity"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".WeiXinActivity"
+            android:name=".WeiChatActivity"
             android:screenOrientation="portrait"/>
 
     </application>
