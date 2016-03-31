@@ -1,10 +1,12 @@
 # Crop - Image Cropping Library for Android
 
-#### This project is forked from Yalantis/uCrop. Due to the modification of too much content, so did not create a branch modification in the original project.
+#### This project is forked from Yalantis/uCrop. Since the modified too much, so did not create a branch from the original project.
+
+## WeChat crop picture demo
+<br/>
+<div align="center"><img src="https://raw.githubusercontent.com/xuehuayous/Android-Crop/master/wechat_demo.gif" /></div>
 
 <img src="https://d13yacurqjgara.cloudfront.net/users/221935/screenshots/2474295/animation.gif" alt="alt text" style="width:200;height:200">
-
-<div align="center"><img src="https://raw.githubusercontent.com/xuehuayous/Android-Crop/master/weixin_demo.gif" /></div>
 
 ## License
 
