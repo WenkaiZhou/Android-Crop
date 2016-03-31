@@ -4,6 +4,9 @@
 
 <img src="https://d13yacurqjgara.cloudfront.net/users/221935/screenshots/2474295/animation.gif" alt="alt text" style="width:200;height:200">
 
+![AdLoopView Simple Demo](https://raw.githubusercontent.com/xuehuayous/Android-Crop/master/weixin_demo.gif)
+
+<div align="center"><img src="https://raw.githubusercontent.com/xuehuayous/Android-Crop/master/weixin_demo.gif" /></div>
 ## License
 
     Copyright 2016, Kevin.zhou
