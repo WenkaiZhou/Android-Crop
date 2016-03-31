@@ -85,9 +85,12 @@ public class WeiChatActivity extends BaseActivity implements View.OnClickListene
      * @param uri
      */
     private void startCropActivity(Uri uri) {
-        UCrop uCrop = UCrop.of(uri, mDestinationUri);
-        uCrop.setTargetActivity(WeiChatCropActivity.class);
-        uCrop.start(WeiChatActivity.this);
+        UCrop.of(uri, mDestinationUri)
+                .withTargetActivity(WeiChatCropActivity.class)
+                .withAspectRatio(1, 1)
+//                .withMaxResultSize(500, 500)
+                .start(WeiChatActivity.this);
+
     }
 
     /**

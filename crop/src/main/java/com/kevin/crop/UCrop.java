@@ -192,9 +192,11 @@ public class UCrop {
     /**
      * 设置目标Actiivty的字节码
      * @param cls
+     * @return
      */
-    public void setTargetActivity(Class cls) {
+    public UCrop withTargetActivity(Class cls) {
         this.targetClazz = cls;
+        return this;
     }
 
     /**

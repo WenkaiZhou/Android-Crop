@@ -6,12 +6,14 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.kevin.crop.util.BitmapLoadUtils;
+import com.kevin.crop.view.CropImageView;
 import com.kevin.crop.view.GestureCropImageView;
 import com.kevin.crop.view.OverlayView;
 import com.kevin.crop.view.TransformImageView;
@@ -25,12 +27,15 @@ import java.io.OutputStream;
  */
 public class WeiChatCropActivity extends AppCompatActivity {
 
+    private static final String TAG = "WeiChatCropActivity";
+
     UCropView mUCropView;
     GestureCropImageView mGestureCropImageView;
     OverlayView mOverlayView;
     TextView saveTv;
 
     private Uri mOutputUri;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +62,31 @@ public class WeiChatCropActivity extends AppCompatActivity {
         } else {
             setResultException(new NullPointerException("Both input and output Uri must be specified"));
             finish();
+        }
+
+        // 设置裁剪宽高比
+        if (intent.getBooleanExtra(UCrop.EXTRA_ASPECT_RATIO_SET, false)) {
+            float aspectRatioX = intent.getFloatExtra(UCrop.EXTRA_ASPECT_RATIO_X, 0);
+            float aspectRatioY = intent.getFloatExtra(UCrop.EXTRA_ASPECT_RATIO_Y, 0);
+
+            if (aspectRatioX > 0 && aspectRatioY > 0) {
+                mGestureCropImageView.setTargetAspectRatio(aspectRatioX / aspectRatioY);
+            } else {
+                mGestureCropImageView.setTargetAspectRatio(CropImageView.SOURCE_IMAGE_ASPECT_RATIO);
+            }
+        }
+
+        // 设置裁剪的最大宽高
+        if (intent.getBooleanExtra(UCrop.EXTRA_MAX_SIZE_SET, false)) {
+            int maxSizeX = intent.getIntExtra(UCrop.EXTRA_MAX_SIZE_X, 0);
+            int maxSizeY = intent.getIntExtra(UCrop.EXTRA_MAX_SIZE_Y, 0);
+
+            if (maxSizeX > 0 && maxSizeY > 0) {
+                mGestureCropImageView.setMaxResultImageSizeX(maxSizeX);
+                mGestureCropImageView.setMaxResultImageSizeY(maxSizeY);
+            } else {
+                Log.w(TAG, "EXTRA_MAX_SIZE_X and EXTRA_MAX_SIZE_Y must be greater than 0");
+            }
         }
     }
 
@@ -135,7 +165,6 @@ public class WeiChatCropActivity extends AppCompatActivity {
                 @Override
                 public void onAnimationStart(Animation animation) {
                     mUCropView.setVisibility(View.VISIBLE);
-                    mGestureCropImageView.setTargetAspectRatio(1);
                     mGestureCropImageView.setImageToWrapCropBounds();
                 }
 
