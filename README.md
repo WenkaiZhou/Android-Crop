@@ -8,6 +8,21 @@
 
 <img src="https://d13yacurqjgara.cloudfront.net/users/221935/screenshots/2474295/animation.gif" alt="alt text" style="width:200;height:200">
 
+## Using Crop in your application
+
+If you are building with Gradle, simply add the following line to the `dependencies` section of your `build.gradle` file:
+
+```
+	compile 'com.kevin:crop:1.0.1'
+```
+
+If you've added com.android.support:appcompat-v7:23.3.0 Please use the following configuration
+
+    compile('com.kevin:crop:1.0.1') {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+
+
 ## License
 
     Copyright 2016, Kevin.zhou
