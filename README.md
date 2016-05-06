@@ -16,7 +16,7 @@ If you are building with Gradle, simply add the following line to the `dependenc
 	compile 'com.kevin:crop:1.0.1'
 ```
 
-If you've added com.android.support:appcompat-v7:23.3.0 Please use the following configuration
+If you've added com.android.support:appcompat-v7:xx.x.x Please use the following configuration
 
     compile('com.kevin:crop:1.0.1') {
         exclude group: 'com.android.support', module: 'appcompat-v7'
