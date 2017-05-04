@@ -169,7 +169,7 @@ public class SampleActivity extends BaseActivity {
 
         uCrop = basisConfig(uCrop);
         uCrop = advancedConfig(uCrop);
-        uCrop.setTargetActivity(UCropActivity.class);
+        uCrop.withTargetActivity(UCropActivity.class);
 
         uCrop.start(SampleActivity.this);
     }
