@@ -238,13 +238,13 @@ public class UCropActivity extends AppCompatActivity {
     private void setupAppBar() {
         setStatusBarColor(mStatusBarColor);
 
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = findViewById(R.id.toolbar);
 
         // Set all of the Toolbar coloring
         toolbar.setBackgroundColor(mToolbarColor);
         toolbar.setTitleTextColor(mToolbarTextColor);
 
-        final TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+        final TextView toolbarTitle = toolbar.findViewById(R.id.toolbar_title);
         toolbarTitle.setTextColor(mToolbarTextColor);
         toolbarTitle.setText(mToolbarTitle);
 
@@ -261,22 +261,22 @@ public class UCropActivity extends AppCompatActivity {
     }
 
     private void initiateRootViews() {
-        mUCropView = (UCropView) findViewById(R.id.ucrop);
+        mUCropView = findViewById(R.id.ucrop);
         mGestureCropImageView = mUCropView.getCropImageView();
         mOverlayView = mUCropView.getOverlayView();
 
         mGestureCropImageView.setTransformImageListener(mImageListener);
 
-        mWrapperStateAspectRatio = (ViewGroup) findViewById(R.id.state_aspect_ratio);
+        mWrapperStateAspectRatio = findViewById(R.id.state_aspect_ratio);
         mWrapperStateAspectRatio.setOnClickListener(mStateClickListener);
-        mWrapperStateRotate = (ViewGroup) findViewById(R.id.state_rotate);
+        mWrapperStateRotate = findViewById(R.id.state_rotate);
         mWrapperStateRotate.setOnClickListener(mStateClickListener);
-        mWrapperStateScale = (ViewGroup) findViewById(R.id.state_scale);
+        mWrapperStateScale = findViewById(R.id.state_scale);
         mWrapperStateScale.setOnClickListener(mStateClickListener);
 
-        mLayoutAspectRatio = (ViewGroup) findViewById(R.id.layout_aspect_ratio);
-        mLayoutRotate = (ViewGroup) findViewById(R.id.layout_rotate_wheel);
-        mLayoutScale = (ViewGroup) findViewById(R.id.layout_scale_wheel);
+        mLayoutAspectRatio = findViewById(R.id.layout_aspect_ratio);
+        mLayoutRotate = findViewById(R.id.layout_rotate_wheel);
+        mLayoutScale = findViewById(R.id.layout_scale_wheel);
 
         ((ImageView) findViewById(R.id.image_view_logo)).setColorFilter(mLogoColor, PorterDuff.Mode.SRC_ATOP);
     }
