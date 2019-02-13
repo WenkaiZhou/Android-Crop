@@ -13,12 +13,12 @@
 If you are building with Gradle, simply add the following line to the `dependencies` section of your `build.gradle` file:
 
 ```
-	compile 'com.kevin:crop:1.0.1'
+	compile 'com.kevin:crop:1.0.2'
 ```
 
 If you've added com.android.support:appcompat-v7:xx.x.x Please use the following configuration
 
-    compile('com.kevin:crop:1.0.1') {
+    compile('com.kevin:crop:1.0.2') {
         exclude group: 'com.android.support', module: 'appcompat-v7'
     }
 
